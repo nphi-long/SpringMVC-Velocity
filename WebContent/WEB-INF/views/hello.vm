@@ -1,0 +1,21 @@
+<h1>Index</h1>
+
+ #set($foo="Hello World")
+<h2>$foo</h2>
+#if($list.size() == 3)
+	This table has three items
+#else
+	This table has $list.size() items
+#end
+<table border="1">
+	<tr >
+		<th>#</th>
+		<th >Name</th>
+    </tr>
+	#foreach($element in $list)
+	<tr>
+        <td>$foreach.count</td>
+		<td>$element</td>
+    </tr>
+	#end
+</table>
